@@ -1,4 +1,4 @@
-b518d18a12dd2558651e2cbcb1754f50 *DESCRIPTION
+128118d59ee1677f5e2b4c05f8a68e4e *DESCRIPTION
 f0a18b78e88efb6e819914e2f89442e4 *NAMESPACE
 83390d310e4be981c7143a98c3d6b8a2 *NEWS.md
 08b494bdc32646908cec049b88c845d9 *R/RcppExports.R
@@ -7,7 +7,7 @@ f0a18b78e88efb6e819914e2f89442e4 *NAMESPACE
 6eca191afdeba31de7a65848445740e2 *R/densities.R
 036a9907024942238f54cf561533007a *R/eval.R
 277fdb16fab6c1ef71137320cd8942b4 *R/fill_na.R
-12d4cc5aaac9417c6e87b990c34a7b51 *R/interface.R
+7ece48ac547d40cc5c28e7a58be13f83 *R/interface.R
 0374309846025c392f81237dfd0b925a *R/interval_to_moments.R
 c274a6837aa034f8b9b07ce4010ee705 *R/mcmc_diffuse.R
 6fb2ce1d94624e12c79ba38a5d3ba19e *R/mcmc_sampler.R
@@ -29,9 +29,9 @@ d5c31254bd5a7f3c13913e69b29fe7a9 *build/vignette.rds
 631cc37793bffed394b82ea0f5078b33 *configure.ac
 5f40ab7ba4b0dddf01f586ceff30ffce *data/mf_sweden.RData
 0b05958aa78021b282752a9234f7bbf0 *inst/data_prep.R
-a190be420c5fef177a84923826de5b23 *inst/doc/mfbvar_jss.R
-d6880588df124e2e1b82b1bee6272f1e *inst/doc/mfbvar_jss.Rnw
-abdc64c9fd1995990ec89e64a70cc20b *inst/doc/mfbvar_jss.pdf
+6050c4d2f2812e54f4ccb50daa7cff9f *inst/doc/mfbvar_jss.R
+9e28699a7c41fd7d1aaf03fea31b2353 *inst/doc/mfbvar_jss.Rnw
+94b889e8e21812216f84f09f6df4c428 *inst/doc/mfbvar_jss.pdf
 e8d244ad3b53ab1e8cc3c4002e177516 *inst/include/auxmix.h
 eb34b10e4d7c643d6404b8b584cbfa2a *inst/include/eta_progress_bar.hpp
 fd41c6a6ab6d3e606031acdb8d054d90 *inst/include/mfbvar.h
@@ -134,9 +134,15 @@ f631d339e4547c241879769328fc70a7 *tests/testthat/Z_ss.rds
 146b8226494300c1f5665167254c0a73 *tests/testthat/mdd_ss1.rds
 dd16d17947c2a040a374def0d0e81d65 *tests/testthat/mdd_ss2.rds
 66371cb37c4e53352abeacc4031202b6 *tests/testthat/psi_ss.rds
-d55f08ff8b0c9a8e5c2386d9a51162c1 *tests/testthat/test_mcmc.R
+594cc5d9498e875db348d0c71f83b72c *tests/testthat/test_mcmc.R
 a95da1f387d063106aa7104109e0cb02 *tests/testthat/test_mfbvar.R
 ea0925eb5fcdb1792fb2c96872075dae *tests/testthat/test_plot.R
 4adc39681f128637c0e8de47caf2df08 *tests/testthat/test_predict.R
-d6880588df124e2e1b82b1bee6272f1e *vignettes/mfbvar_jss.Rnw
+4036062fb92eabc6a33ae9825eba8c4a *vignettes/figures/ridges-1.pdf
+658f128b17c98acd54f565fb82ba1c89 *vignettes/figures/ss_plots-1.pdf
+3479ecc02763e38f40c3043b57c07d05 *vignettes/figures/ss_plots-2.pdf
+2b64a695a4aaceefa97159a291bdc949 *vignettes/figures/varplot-1.pdf
+5dfe256be5669cedb2b3e66a53c9e97c *vignettes/figures/varplot-2.pdf
+9e28699a7c41fd7d1aaf03fea31b2353 *vignettes/mfbvar_jss.Rnw
 60965fbf087a9352a67ae7d7a5c1881c *vignettes/refs.bib
+549f37f5fe2819df2bc5bafda1ca2d68 *vignettes/vignette_data.RData
