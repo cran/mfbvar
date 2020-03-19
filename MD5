@@ -1,13 +1,13 @@
-128118d59ee1677f5e2b4c05f8a68e4e *DESCRIPTION
+984e9ce76883b74cc03fd74c5f603ee6 *DESCRIPTION
 f0a18b78e88efb6e819914e2f89442e4 *NAMESPACE
-83390d310e4be981c7143a98c3d6b8a2 *NEWS.md
+3b4839e67e3841f6ba12a3d5b7c43f6b *NEWS.md
 08b494bdc32646908cec049b88c845d9 *R/RcppExports.R
 84606a753be164a1a541c4862156e98a *R/builders.R
 524cb3c1e3c6811245c0360f7cdf452e *R/data.R
 6eca191afdeba31de7a65848445740e2 *R/densities.R
 036a9907024942238f54cf561533007a *R/eval.R
 277fdb16fab6c1ef71137320cd8942b4 *R/fill_na.R
-7ece48ac547d40cc5c28e7a58be13f83 *R/interface.R
+0a247fcd51b9f25dbc5796ec3fad86cf *R/interface.R
 0374309846025c392f81237dfd0b925a *R/interval_to_moments.R
 c274a6837aa034f8b9b07ce4010ee705 *R/mcmc_diffuse.R
 6fb2ce1d94624e12c79ba38a5d3ba19e *R/mcmc_sampler.R
@@ -30,8 +30,8 @@ d5c31254bd5a7f3c13913e69b29fe7a9 *build/vignette.rds
 5f40ab7ba4b0dddf01f586ceff30ffce *data/mf_sweden.RData
 0b05958aa78021b282752a9234f7bbf0 *inst/data_prep.R
 6050c4d2f2812e54f4ccb50daa7cff9f *inst/doc/mfbvar_jss.R
-9e28699a7c41fd7d1aaf03fea31b2353 *inst/doc/mfbvar_jss.Rnw
-94b889e8e21812216f84f09f6df4c428 *inst/doc/mfbvar_jss.pdf
+17486411622e91e3af90c97a2d6313e3 *inst/doc/mfbvar_jss.Rnw
+c64bf0c5b208abaf90d50ff31dcbd713 *inst/doc/mfbvar_jss.pdf
 e8d244ad3b53ab1e8cc3c4002e177516 *inst/include/auxmix.h
 eb34b10e4d7c643d6404b8b584cbfa2a *inst/include/eta_progress_bar.hpp
 fd41c6a6ab6d3e606031acdb8d054d90 *inst/include/mfbvar.h
@@ -143,6 +143,6 @@ ea0925eb5fcdb1792fb2c96872075dae *tests/testthat/test_plot.R
 3479ecc02763e38f40c3043b57c07d05 *vignettes/figures/ss_plots-2.pdf
 2b64a695a4aaceefa97159a291bdc949 *vignettes/figures/varplot-1.pdf
 5dfe256be5669cedb2b3e66a53c9e97c *vignettes/figures/varplot-2.pdf
-9e28699a7c41fd7d1aaf03fea31b2353 *vignettes/mfbvar_jss.Rnw
-60965fbf087a9352a67ae7d7a5c1881c *vignettes/refs.bib
+17486411622e91e3af90c97a2d6313e3 *vignettes/mfbvar_jss.Rnw
+ffabaefa56e325e13ef38aa92ab66fad *vignettes/refs.bib
 549f37f5fe2819df2bc5bafda1ca2d68 *vignettes/vignette_data.RData
