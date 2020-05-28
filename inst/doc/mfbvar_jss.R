@@ -15,38 +15,47 @@ local({
 set.seed(100)
 
 ## ----message = FALSE------------------------------------------------
-library("purrr")
 library("dplyr")
 library("ggplot2")
 library("alfred")
 
 variables <- c("CPIAUCSL", "UNRATE", "GDPC1")
-out <- map(variables, get_alfred_series,
+out <- lapply(variables, get_alfred_series,
            observation_start = "1980-01-01",
            observation_end = "2018-11-01",
            realtime_start = "2018-12-10",
            realtime_end = "2018-12-10")
 
-## -------------------------------------------------------------------
-out[[3]]$date <- out[[3]]$date + months(2)
 
 ## -------------------------------------------------------------------
-log_diff <- function(x, lag = 1) {
-  c(rep(NA, lag), 1200/lag * diff(log(x), lag = lag))
+alfred_to_ts <- function(x, freq) {
+  ts(x[, 3],
+     start = c(1980, 1),
+     frequency = freq)
 }
 
-mf_df <- reduce(out, full_join, by = c("date", "realtime_period")) %>%
-  mutate(CPIAUCSL = log_diff(CPIAUCSL),
-         GDPC1 = log_diff(GDPC1, lag = 3)) %>%
-  filter(date >= "1980-04-01") %>%
-  select(-realtime_period)
+mf_list <- mapply(alfred_to_ts, x = out, freq = c(12, 12, 4))
+names(mf_list) <- variables
 
-tail(mf_df)
+## -------------------------------------------------------------------
+log_diff <- function(x) {
+  freq <- frequency(x)
+  100 * freq * diff(log(x))
+}
+
+mf_list[c("CPIAUCSL", "GDPC1")] <- 
+  lapply(mf_list[c("CPIAUCSL", "GDPC1")], log_diff)
+
+## -------------------------------------------------------------------
+mf_list <- mapply(window, x = mf_list, 
+                  start = list(c(1980, 4), c(1980, 4), c(1980, 2)))
+
+## -------------------------------------------------------------------
+str(mf_list, vec.len = 2)
 
 ## -------------------------------------------------------------------
 library("mfbvar")
-prior <- set_prior(Y = mf_df, freq = c("m", "m", "q"),
-                   n_lags = 4, n_burnin = 1000, n_reps = 1000)
+prior <- set_prior(Y = mf_list, n_lags = 4, n_reps = 1000)
 
 ## -------------------------------------------------------------------
 prior

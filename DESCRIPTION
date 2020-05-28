@@ -1,8 +1,8 @@
 Package: mfbvar
 Type: Package
 Title: Mixed-Frequency Bayesian VAR Models
-Version: 0.5.3
-Date: 2020-03-18
+Version: 0.5.4
+Date: 2020-05-14
 Authors@R: c(
     person("Sebastian", "Ankargren", email = "sebastian.ankargren@statistics.uu.se", role = c("cre", "aut"), comment = c(ORCID = "0000-0003-4415-8734")),
     person("Yukai", "Yang", email = "yukai.yang@statistics.uu.se", role = c("aut"), comment=c(ORCID="0000-0002-2623-8549")),
@@ -14,22 +14,21 @@ URL: https://github.com/ankargren/mfbvar
 BugReports: https://github.com/ankargren/mfbvar/issues
 Imports: Rcpp (>= 0.12.7), ggplot2 (>= 3.3.0), methods, lubridate,
         GIGrvg, stochvol (>= 2.0.3), RcppParallel, dplyr, magrittr,
-        tibble
+        tibble, zoo
 LinkingTo: Rcpp, RcppArmadillo, RcppProgress, stochvol (>= 2.0.3),
         RcppParallel
 Depends: R (>= 3.5.0)
-Suggests: testthat, covr, knitr, ggridges, alfred, factorstochvol,
-        purrr
-RoxygenNote: 6.1.1
+Suggests: testthat, covr, knitr, ggridges, alfred, factorstochvol
+RoxygenNote: 7.1.0
 Encoding: UTF-8
 SystemRequirements: GNU make
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2020-03-19 21:22:35 UTC; sebastianankargren
+Packaged: 2020-05-14 19:01:15 UTC; sebastianankargren
 Author: Sebastian Ankargren [cre, aut]
     (<https://orcid.org/0000-0003-4415-8734>),
   Yukai Yang [aut] (<https://orcid.org/0000-0002-2623-8549>),
   Gregor Kastner [ctb] (<https://orcid.org/0000-0002-8237-8271>)
 Maintainer: Sebastian Ankargren <sebastian.ankargren@statistics.uu.se>
 Repository: CRAN
-Date/Publication: 2020-03-19 22:30:06 UTC
+Date/Publication: 2020-05-28 18:30:02 UTC
