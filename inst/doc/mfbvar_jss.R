@@ -14,17 +14,26 @@ local({
 })
 set.seed(100)
 
-## ----message = FALSE------------------------------------------------
+## ----message = FALSE, eval = FALSE----------------------------------
+#  library("dplyr")
+#  library("ggplot2")
+#  library("alfred")
+#  
+#  variables <- c("CPIAUCSL", "UNRATE", "GDPC1")
+#  out <- lapply(variables, get_alfred_series,
+#             observation_start = "1980-01-01",
+#             observation_end = "2018-11-01",
+#             realtime_start = "2018-12-10",
+#             realtime_end = "2018-12-10")
+#  
+
+## ----message = FALSE, include = FALSE-------------------------------
 library("dplyr")
 library("ggplot2")
 library("alfred")
 
 variables <- c("CPIAUCSL", "UNRATE", "GDPC1")
-out <- lapply(variables, get_alfred_series,
-           observation_start = "1980-01-01",
-           observation_end = "2018-11-01",
-           realtime_start = "2018-12-10",
-           realtime_end = "2018-12-10")
+load("alfred_data.RData")
 
 
 ## -------------------------------------------------------------------
@@ -43,11 +52,11 @@ log_diff <- function(x) {
   100 * freq * diff(log(x))
 }
 
-mf_list[c("CPIAUCSL", "GDPC1")] <- 
+mf_list[c("CPIAUCSL", "GDPC1")] <-
   lapply(mf_list[c("CPIAUCSL", "GDPC1")], log_diff)
 
 ## -------------------------------------------------------------------
-mf_list <- mapply(window, x = mf_list, 
+mf_list <- mapply(window, x = mf_list,
                   start = list(c(1980, 4), c(1980, 4), c(1980, 2)))
 
 ## -------------------------------------------------------------------
